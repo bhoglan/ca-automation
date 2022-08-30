@@ -7,6 +7,9 @@ printf "\n *********************************************************************
 printf "\n Thank you for using BrianTheImpaler.com\'s Intermediate CA. This script\n will simplify the process of issuing a certificate to a new client\n machine using the openssl cli."
 printf "\n ************************************************************************"
 # Intake machine name
+    # This is one method of reading the variable. It's a little fucky because 'read' doesn't like
+    # newline characters. So you have to echo the newline in. Oddly enough it won't actually echo
+    # the character without the second \b (backspace) character to "give it something to do"
     printf "\n"
     read -p "Client Machine Name: (Please note, this is the machine name itself, `echo $'\nnot the FQDN of the machine):' echo $'\n> '`" machineVar
         # Create FQDN for later use in the cert common name
@@ -17,6 +20,8 @@ printf "\n *********************************************************************
     read -sp "Generate a password for the client certificate .p12 pack: `echo $'\n> '` " p12PackPass
     printf "\n"
 # Read Intermediate CA private key password
+    # This is the other method of reading the variable. This method uses printf to nicely print the
+    # text. Then we use read -sp to read in the password.
     printf "Please enter the password for the BrianTheImpaler.com \nIntermediate CA Private Key to allow it to sign the new certificate: \n" 
     read -sp "> " intCAKeyPass
 printf "\n \n \n"
