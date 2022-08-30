@@ -1,5 +1,7 @@
-- [ ] Build a help dialogue for the client cert script
+- [x] Build a help dialogue for the client cert script
 - [ ] Make the client cert script output prettier
 - [ ] Build the revocation script
 - [ ] Build the server cert script
 - [ ] Build bash best practices doc
+- [ ] Incorporate scp support into the cert generators. Provide a y/n option to scp the file.
+- [ ] Incorporate client install instructions (again, y/n) Maybe allow OS selection?
