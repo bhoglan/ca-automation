@@ -8,8 +8,7 @@ printf "\n Thank you for using BrianTheImpaler.com\'s Intermediate CA. This scri
 printf "\n ************************************************************************"
 # Intake machine name
     printf "\n"
-    printf "Client Machine Name: (Please note, this is the machine name itself, \nnot the FQDN of the machine): \n"
-    read -p "> " machineVar
+    read -p "Client Machine Name: (Please note, this is the machine name itself, `echo $'\nnot the FQDN of the machine):' echo $'\n> '`" machineVar
         # Create FQDN for later use in the cert common name
         fqdn='$machineVar'+'.briantheimpaler.com'
 # Intake secrets
