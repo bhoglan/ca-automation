@@ -1,6 +1,13 @@
 #!/bin/bash
 # Used for certificate issuance for client machines
 
+####Generate a nice little help flag for the user####
+# The first line tests the input to count how many arguments are present. If there are 0 arguments
+# it moves on to see if the --help flag is present, if it is, then it moves on to printing.
+if [ ${#@} -ne 0 ] && [ "${@#"--help"}" = "" ]; then
+  printf -- '...help...\n';
+  exit 0;
+fi;
 
 # Greet the kind user
 printf "\n ************************************************************************"

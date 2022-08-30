@@ -1,0 +1,5 @@
+- [ ] Build a help dialogue for the client cert script
+- [ ] Make the client cert script output prettier
+- [ ] Build the revocation script
+- [ ] Build the server cert script
+- [ ] Build bash best practices doc
